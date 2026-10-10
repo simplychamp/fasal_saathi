@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from "react";
+import { createRoot } from "react-dom/client";
 import "./style.css";
 
 const crops = {
@@ -143,4 +144,9 @@ export default function App() {
       </main>
     </div>
   );
+}
+
+const rootElement = document.getElementById("root");
+if (rootElement) {
+  createRoot(rootElement).render(<App />);
 }
